@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Web Scraper</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #eef2f7; }
+    input[type=url], button { padding: 10px; font-size: 16px; width: 100%; }
+    .result { margin-top: 20px; background: white; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔍 Custom Web Scraper</h1>
+  <form method="post">{% csrf_token %}
+    <input type="url" name="target_url" placeholder="Enter a URL to scrape..." required>
+    <button type="submit">Scrape!</button>
+  </form>
+
+  {% if results %}
+    <div class="result">
+      <h2>Found {{ results|length }} links:</h2>
+      <ul>
+        {% for item in results %}
+          <li><a href="{{ item.href }}" target="_blank">{{ item.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</body>
+</html>
