@@ -1,18 +1,3 @@
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Ran tool
-Read file: scrape_and_summarize.py
-Here is a detailed README for your repository, covering project purpose, structure, setup, and usage:
-
----
-
 # Django-Compatible News Scraping & Summarization
 
 This repository provides:
